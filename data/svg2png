@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for svg_file in i*.svg; do
+    echo Converting $svg_file
+    filename=$(basename -- "$svg_file")
+    filename="${filename%.*}"
+    convert -density 1200 -resize x300 $filename.svg $filename.png
+done
