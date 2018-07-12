@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for svg_file in i*.svg; do
+for svg_file in *.svg; do
     echo Converting $svg_file
     filename=$(basename -- "$svg_file")
     filename="${filename%.*}"
